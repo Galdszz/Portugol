@@ -1,5 +1,7 @@
 programa
 {
+    real CMLT, COMBUSTIVELNAAERONAVE, TOTALDECOMBUSTIVEL
+    real ALQ, TRECHOPLANEJADO, TRECHOALTERNATIVO, TRECHOTOTAL, ABASTECIMENTO
 
     funcao mais(){
         TRECHOTOTAL = TRECHOPLANEJADO + TRECHOALTERNATIVO
@@ -18,9 +20,6 @@ programa
     }
 
     funcao inicio(){
-    
-        real CMLT, COMBUSTIVELNAAERONAVE, TOTALDECOMBUSTIVEL
-        real ALQ, TRECHOPLANEJADO, TRECHOALTERNATIVO, TRECHOTOTAL, ABASTECIMENTO
 
         escreva("Média da aeronave em litros por quilômetros: ")
         leia (MALQ)
@@ -39,21 +38,21 @@ programa
 
 
         mais()
-        escreva("O Trecho total é de: ", TRECHOTOTAL," Km." )
+        escreva("\nO Trecho total é de: ", TRECHOTOTAL," Km.")
         
         Combustivelprecisa()
-        escreva("\n O combustivel que é preciso para chegar: ",TOTALDECOMBUSTIVEL," Litros" )
+        escreva("\n O combustivel que é preciso para chegar: ", TOTALDECOMBUSTIVEL ," Litros")
 
         multiplicacao()
-        escreval ("\n Quantidade de Combustivel com os 30% de segurança:", TOTALDECOMBUSTIVEL," Litros " )
+        escreva("\n Quantidade de Combustivel com os 30% de segurança:", TOTALDECOMBUSTIVEL," Litros ")
 
         abastecer()
-        escreval ("\n A quantidade que precisa abastecer é :",ABASTECIMENTO, " Litros")
+        escreva("\n A quantidade que precisa abastecer é :",ABASTECIMENTO, " Litros")
 
         se(TOTALDECOMBUSTIVEL <= CMLT){
-            escreval ("\n Voo Aprovado, bom voo!")
+            escreva("\n Voo Aprovado, bom voo!")
         } senao{
-            escreval ("\n Voo Reprovado, reveja seu planejamento.")
+            escreva("\n Voo Reprovado, reveja seu planejamento.")
         }
     }
 

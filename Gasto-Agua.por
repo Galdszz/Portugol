@@ -10,7 +10,7 @@ programa
         
             enquanto(n != 0){
 
-                escreva("nsira a quantidade de litros consumidos ou 0 para encerrar")
+                escreva("Insira a quantidade de litros consumidos ou 0 para encerrar")
                 leia(n)
             
                 cub = (n/1000)
